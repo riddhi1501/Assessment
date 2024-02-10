@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation Example</title>
+</head>
+<body>
+
+  <button id="updateButton">Click me</button>
+  <p id="outputParagraph">Initial text</p>
+
+  <script>
+    // Immediately Invoked Function Expression (IIFE) to encapsulate the code
+    (function() {
+      // Function to handle button click event
+      function handleButtonClick() {
+        // Select the paragraph element by its id
+        const outputParagraph = document.querySelector('#outputParagraph');
+        
+        // Update the text content of the paragraph
+        outputParagraph.textContent = 'Button clicked!';
+      }
+
+      // Select the button element by its id
+      const updateButton = document.querySelector('#updateButton');
+
+      // Add click event listener to the button, calling the handleButtonClick function
+      updateButton.addEventListener('click', handleButtonClick);
+    })();
+  </script>
+
+</body>
+</html>
