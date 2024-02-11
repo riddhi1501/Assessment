@@ -1,0 +1,44 @@
+/* IG.css */
+
+/* Add your custom styles for the gallery here */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+.col-md-4{
+    padding: 0;
+    /* margin: 0 10px 0 0; */
+}
+.gallery-item {
+    overflow: hidden;
+    height: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the entire container */
+}
+.gallery-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 10, 11, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.gallery-item:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
